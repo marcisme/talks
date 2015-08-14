@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+if [ $# -ne 1 ]; then
+  echo "usage: $(basename $0) <pattern>"
+  exit 1
+fi
+
+readonly pattern=$1
+
+readonly frameworks_dir="$(xcode-select --print-path)/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks"
+# readonly frameworks_dir="$(xcode-select --print-path)"
+
+echo "Searching $frameworks_dir"
+
+# ag -l --cc "\w+\[1\];" "$frameworks_dir" | sed 's/^.*Frameworks\///'
+# ag -l --cc "\w+\[1\];" "$frameworks_dir" | xargs basename
+# ag --cc -B -A "\w+\[1\];" "$frameworks_dir"
+# ag --cc "\w+\[1\];.*variable.*" "$frameworks_dir"
+ag $pattern "$frameworks_dir"
+
