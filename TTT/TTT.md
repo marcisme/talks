@@ -203,6 +203,13 @@ end
 
 ---
 
+# Conclusion
+
+* `Timeout` is *very* hard to use safely
+* You may be using it already; Check your dependencies
+* Seek alternative solutions
+* Use `Thread.handle_interrupt` if you absolutely must
+
 # Marc Schwieterman
 
 * [@mschwieterman](https://twitter.com/mschwieterman)
