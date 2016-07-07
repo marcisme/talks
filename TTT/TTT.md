@@ -210,6 +210,8 @@ end
 * Seek alternative solutions
 * Use `Thread.handle_interrupt` if you absolutely must
 
+---
+
 # Marc Schwieterman
 
 * [@mschwieterman](https://twitter.com/mschwieterman)
